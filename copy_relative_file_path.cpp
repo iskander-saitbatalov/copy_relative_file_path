@@ -93,40 +93,8 @@ void plugin::copy_relative_file_path_with_include ()
   Utils::setClipboardAndSelection (QString ("#include \"%1\"").arg (filepath));
 }
 
-#include <utils/hostosinfo.h>
-namespace
-{
-bool hasLibSuffix (const Utils::FilePath &path)
-{
-  using namespace Utils;
-
-  return (HostOsInfo::isWindowsHost () && path.endsWith (".dll")) || (HostOsInfo::isLinuxHost () && path.completeSuffix ().startsWith ("so"))
-         || (HostOsInfo::isMacHost () && path.endsWith (".dylib"));
-}
-
-}  // namespace
-
 QString plugin::get_current_relative_file_path ()
 {
-  ///
-  /// \brief editor
-  ///
-  ///
-  Utils::FilePath filePath = "/home/iskander.saitbatalov/dev/qt_plugins/copy_relative_file_path/out/Release/lib64/qtcreator/plugins/CopyRelativeFilePath.so";
-
-  if (hasLibSuffix (filePath))
-    {
-      QMessageBox::warning (
-          nullptr, "Warning!", QString ("Yes! Linux: %1, Suffix: %2").arg (Utils::HostOsInfo::isLinuxHost ()).arg (filePath.completeSuffix ()),
-          QMessageBox::Yes, QMessageBox::No);
-      return "";
-    }
-  else
-    {
-      QMessageBox::warning (nullptr, "Warning!", "No!", QMessageBox::Yes, QMessageBox::No);
-      return "";
-    }
-
   Core::IEditor *editor = Core::EditorManager::currentEditor ();
   if (!editor)
     return {};

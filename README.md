@@ -20,13 +20,13 @@ cd copy_relative_file_path
 
 3. Install plugin.
 
-3.1. From command line
+  3.1. From command line
 
-```console
-qtcreator -pluginpath ../out/Release/
-```
+  ```console
+  qtcreator -pluginpath ../out/Release/
+  ```
 
-3.2. Or from settings in plugin (in this case you have to select generated ZIP archieve in `../out/` directory):
+  3.2. Or from settings in plugin (in this case you have to select generated ZIP archieve in `../out/` directory):
 
 <img src="resources/github_img/install_plugin.png" alt="Plugin Menu" width="650"/>
 
