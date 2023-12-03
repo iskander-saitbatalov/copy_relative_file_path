@@ -1,0 +1,11 @@
+{
+    \"Name\" : \"CopyRelativeFilePath\",
+    \"Version\" : \"0.0.2\",
+    \"CompatVersion\" : \"0.0.2\",
+    \"Vendor\" : \"Iskander Saitbatalov Irekovich\",
+    \"Copyright\" : \"(C) Iskander Saitbatalov Irekovich\",
+    \"License\" : \"BSD\",
+    \"Description\" : \"Special development for one lazy developer :P\",
+    \"Url\" : \"https://www.rfdyn.com\",
+    $$dependencyList
+}
