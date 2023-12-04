@@ -104,7 +104,7 @@ QString plugin::get_current_relative_file_path ()
     return {};
 
   auto full_file_path = entry->fileName ().toUserOutput ();
-  auto from_src = qstring_utils::cut_from (full_file_path, "src");
+  auto from_src = qstring_utils::cut_from (full_file_path, "/src/");
   auto from_include = qstring_utils::cut_from (from_src, "/include/");
   return from_include;
 }
