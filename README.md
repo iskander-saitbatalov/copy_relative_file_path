@@ -8,7 +8,7 @@ Small plugin for Qt Creator which allows you to copy a relative path to a file, 
 
 1. Clone repo:
 ```console
-git clone git@github.com:iskander-saitbatalov/copy_relative_file_path.git
+git clone https://github.com/iskander-saitbatalov/copy_relative_file_path.git
 ```
 
 2. Build plugin:
