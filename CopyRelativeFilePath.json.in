@@ -7,5 +7,5 @@
     \"License\" : \"BSD\",
     \"Description\" : \"Special development for one lazy developer :P\",
     \"Url\" : \"https://www.rfdyn.com\",
-    $$dependencyList
+    ${IDE_PLUGIN_DEPENDENCIES}
 }
