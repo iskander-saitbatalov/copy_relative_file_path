@@ -102,8 +102,11 @@ QString plugin::get_current_relative_file_path ()
   Core::DocumentModel::Entry *entry = Core::DocumentModel::entryForDocument (editor->document ());
   if (!entry)
     return {};
-
+#if (IDE_VERSION_MAJOR >= 10)
+  auto full_file_path = entry->filePath ().toUserOutput ();
+#else
   auto full_file_path = entry->fileName ().toUserOutput ();
+#endif
   auto from_src = qstring_utils::cut_from (full_file_path, "/src/");
   auto from_include = qstring_utils::cut_from (from_src, "/include/");
   return from_include;
