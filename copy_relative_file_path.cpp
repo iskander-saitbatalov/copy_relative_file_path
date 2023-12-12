@@ -61,7 +61,7 @@ bool plugin::initialize (const QStringList &arguments, QString *errorString)
     Core::Command *cmd = Core::ActionManager::registerAction (
         copy_relative_file_path__with_include_action, Constants::COPY_RELARIVE_PATH_WITH_INCLUDE_ACTION_ID,
         Core::Context (Core::Constants::C_GLOBAL));
-    cmd->setDefaultKeySequence (QKeySequence (tr ("Ctrl+Alt+S+R")));
+    cmd->setDefaultKeySequence (QKeySequence (tr ("Ctrl+Alt+R")));
     connect (copy_relative_file_path__with_include_action, &QAction::triggered, this, &plugin::copy_relative_file_path_with_include);
     menu->addAction (cmd);
   }
